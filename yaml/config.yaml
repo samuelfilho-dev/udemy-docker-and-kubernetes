@@ -1,0 +1,40 @@
+# Comentário
+nome: "Samuel"
+idade: 23
+
+objeto:
+  versao: 1.0
+  arquivo: "arquivo.txt"
+
+versao: 2.0
+versao_completa: 3.14
+
+string_sem_aspas: string sem aspas
+texto: "Digite seu texto aqui"
+
+nulo: ~
+nulo_dois: null
+
+verdadeiro: true
+verdadeiro_dois: On
+
+falso: false
+falso_dois: Off
+
+lista: [1, 2, 3, 4, 5]
+
+lista_dois:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+
+obj: {a: 1, b: 2, c: 3, objeto_interno: {x: 2}}
+
+dicionario_dois:
+  'a': 1
+  'b': 2
+  'c': 3
+  objeto_interno:
+    x: 2
