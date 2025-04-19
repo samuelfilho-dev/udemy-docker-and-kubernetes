@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pokedex-service
+spec:
+  selector:
+    app: pokedex-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80 
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokedex-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: pokedex-app
+  template:
+    metadata:
+      labels:
+        app: pokedex-app
+    spec:
+      containers:
+        - name: pokedex-container
+          image: samuelfdev/pokedex:1.0

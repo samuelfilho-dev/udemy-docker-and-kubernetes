@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pokedex-service
+spec:
+  selector:
+    app: pokedex-app # Link com o Deployment, que tem o mesmo label
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80 # Porta do container
+  type: LoadBalancer # Tipo de serviço que expõe o Deployment para o mundo externo
